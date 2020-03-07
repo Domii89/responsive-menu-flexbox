@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hamburger navbar with flexbox</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="navbarflexbox.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(".toggle").on("click", function() {
+
+                    if($(".item").hasClass("active")) {
+                        $(".item").removeClass("active");
+                    }
+                    else {
+                        $(".item").addClass("active");
+                    }
+                })
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="#">Ham Nav Flex</a></li>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">About</a></li>
+                <li class="item"><a href="#">Services</a></li>
+                <li class="item button"><a href="#">Login</a></li>
+                <li class="item button secondary"><a href="#">Signup</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+        <main>
+            <a href="#" style="position: fixed; bottom: 0;">I don't know</a>
+        </main>
+    </body>
+</html>
